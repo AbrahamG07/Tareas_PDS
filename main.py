@@ -1,5 +1,5 @@
 import sys
-from src import tarea1, tarea2, tarea3, tarea4
+from src import tarea1, tarea2, tarea3, tarea4, Practica_DFT, Practica_DFT2
 
 def main():
     if len(sys.argv) < 2:
@@ -33,9 +33,15 @@ def main():
             return
         num_bits = sys.argv[2]
         tarea4.resolver_tarea_4(num_bits)
+    
+    elif tarea == "practica_dft":
+        Practica_DFT.graficas_DFT()
+        
+    elif tarea == "practica_dft2":
+        Practica_DFT2.graficas_DFT_con_ruido()
 
     else:
-        print("Tarea no reconocida. Usa: tarea1, tarea2, tarea3 o tarea4")
+        print("Tarea no reconocida. Usa: tarea1, tarea2, tarea3, tarea4, practica_dft o ptractica_dft2")
 
 if __name__ == "__main__":
     main()

@@ -1,0 +1,20 @@
+En este repositario se encuentran las practicas realizadas durante el curso de Procesamiento de Señales Digitales o PDS
+
+Los trabajos que incluye este repositorio son:
+-Tarea 1
+-Tarea 2
+-Tarea 3
+-Tarea 4 
+-Practica_DFT
+-Practica:DFT2
+
+Modulos de python utilizados:
+-numpy
+-matplotlib
+
+Como ejecutar Practica_DFT y Practica_DFT2
+-Abrir una terminal en la carpeta V_Python_PDS
+-activar el ambiente virtual con source .venv/bin/activate
+-para ejecutar el codigo usando el main.py se usa "python3 main.py practica_dft" y "python3 main.py practica_dft2"
+
+
