@@ -5,19 +5,19 @@ import matplotlib.pyplot as plt
 def graficas_DFT():
     fm = 0.5 
     fc = 8 
-    m_mod = 0.5  # renombrado para no confundir con el índice
+    m_mod = 0.5  
 
-    # Señal continua
+    
     t = np.linspace(0, 0.001, 500)
     xt = (1 + m_mod * np.cos(2 * np.pi * fm * t)) * np.sin(2 * np.pi * fc * t)
 
-    # Señal discreta
-    fs = 8000
-    n = np.arange(8)
+    
+    fs = 1000
+    n = np.arange(20)
     xn = (1 + m_mod * np.cos(2 * np.pi * fm * n / fs)) * np.sin(2 * np.pi * fc * n / fs)
     xn = np.ravel(xn)
 
-    # Graficar señal continua y discreta lado a lado
+    
     plt.figure(figsize=(12,4))
 
     # Señal continua
@@ -42,17 +42,14 @@ def graficas_DFT():
     # Obtención de la transformada discreta de Fourier
     xm = mi_DFT(xn)
 
-    # Redondeamos a cero los valores diminutos
     tol = 1e-14
     xm.real[np.abs(xm.real) < tol] = 0
     xm.imag[np.abs(xm.imag) < tol] = 0
 
-    # Índice de frecuencia discreta
     N = len(n)
     m_idx = np.arange(N)
     fan = m_idx * fs / N
 
-    # Graficar DFT: parte real, imaginaria, magnitud y fase
     plt.figure(figsize=(10,6))
 
     plt.subplot(2,2,1)
