@@ -7,8 +7,8 @@ def graficas_DFT_con_ruido():
     T = 6
     N = int(fs * T)
     ts = 1/fs
-    f1 = 2
-    f2 = 6
+    f1 = 8
+    f2 = 20
 
     n = np.arange(N)
     xn = np.sin(2*np.pi*f1*n*ts) + 0.5*np.sin(2*np.pi*f2*n*ts)
